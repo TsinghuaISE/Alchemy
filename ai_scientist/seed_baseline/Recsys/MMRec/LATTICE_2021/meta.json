@@ -1,0 +1,8 @@
+{
+  "id": "LATTICE_2021",
+  "paper_title": "Mining Latent Structures for Multimedia Recommendation",
+  "alias": "LATTICE",
+  "year": 2021,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

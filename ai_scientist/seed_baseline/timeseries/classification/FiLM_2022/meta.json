@@ -1,0 +1,6 @@
+{
+  "id": "FiLM_2022",
+  "model_name": "FiLM",
+  "task": "classification",
+  "domain": "TimeSeries"
+}

@@ -1,0 +1,19 @@
+task_name: long_term_forecast
+is_training: 1
+seq_len: 96
+label_len: 48
+pred_len: [96, 192, 336, 720]
+batch_size: 512
+c_out: [8, 8, 8, 8]
+d_ff: 256
+d_layers: 2
+d_model: 256
+data: [ETTh1, ETTh1, ETTh1, ETTh1]
+dec_in: [7, 7, 7, 7]
+dropout: 0.3
+e_layers: 2
+enc_in: [7, 7, 7, 7]
+features: [M, M, M, M]
+learning_rate: 0.1
+patience: 5
+train_epochs: 10

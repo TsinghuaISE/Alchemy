@@ -1,0 +1,6 @@
+{
+  "id": "KANAD_2024",
+  "model_name": "KANAD",
+  "task": "anomaly_detection",
+  "domain": "TimeSeries"
+}

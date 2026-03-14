@@ -1,0 +1,13 @@
+task_name: anomaly_detection
+is_training: 1
+model_id: MSL
+model: DLinear
+features: M
+seq_len: 100
+pred_len: 0
+moving_avg: 25
+individual: false
+batch_size: 128
+train_epochs: 10
+learning_rate: 0.0001
+anomaly_ratio: 1

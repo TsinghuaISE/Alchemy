@@ -1,0 +1,6 @@
+{
+  "id": "SegRNN_2023",
+  "model_name": "SegRNN",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

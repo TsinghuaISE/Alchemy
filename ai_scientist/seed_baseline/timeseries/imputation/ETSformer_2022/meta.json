@@ -1,0 +1,6 @@
+{
+  "id": "ETSformer_2022",
+  "model_name": "ETSformer",
+  "task": "imputation",
+  "domain": "TimeSeries"
+}

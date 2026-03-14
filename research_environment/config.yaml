@@ -1,0 +1,35 @@
+
+
+mode: docker  # docker | singularity
+
+shared_root: /home/cly/ai-scientist  # 远程共享根目录
+
+ssh:
+  nodes:
+    - localhost
+  timeout: 30
+
+docker:
+  images:
+    Recsys/MMRec: "mmrec:latest"
+    TimeSeries/LongTermForecast: "timeseries:latest"
+    TimeSeries/ShortTermForecast: "timeseries:latest"
+    TimeSeries/Classification: "timeseries:latest"
+    TimeSeries/AnomalyDetection: "timeseries:latest"
+    TimeSeries/Imputation: "timeseries:latest"
+  conda_env: ""
+  extra_args: []
+
+singularity:
+  exe: singularity
+  sif_images:
+    Recsys/MMRec: "/path/to/mmrec.sif"
+  containall: false
+
+scheduler:
+  gpus_per_node: 1
+  gpu_ids: [2]
+  max_per_gpu: 8
+  max_concurrent: 8
+
+timeout: 3600

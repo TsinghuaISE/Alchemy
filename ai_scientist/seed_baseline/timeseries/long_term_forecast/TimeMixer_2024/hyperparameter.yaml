@@ -1,0 +1,10 @@
+seq_len: 96
+pred_len: 96
+d_model: 512
+d_ff: 2048
+e_layers: 2
+dropout: 0.1
+batch_size: 16
+learning_rate: 0.0001
+train_epochs: 10
+patience: 3

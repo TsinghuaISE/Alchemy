@@ -1,0 +1,32 @@
+task_name: short_term_forecast
+is_training: 1
+data: m4
+seasonal_patterns: [Yearly, Quarterly, Monthly, Weekly, Daily, Hourly]
+
+# Model architecture
+d_model: 64
+n_heads: 8
+e_layers: 3
+d_layers: 2
+d_ff: 256
+factor: 5
+dropout: 0.1
+activation: gelu
+distil: true
+
+# Embedding
+embed: timeF
+freq: h
+
+# Training
+batch_size: 32
+learning_rate: 0.0001
+train_epochs: 8
+patience: 3
+loss: SMAPE
+
+# Features
+features: M
+enc_in: 1
+dec_in: 1
+c_out: 1

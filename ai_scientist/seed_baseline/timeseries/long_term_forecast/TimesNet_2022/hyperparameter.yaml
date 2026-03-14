@@ -1,0 +1,14 @@
+seq_len: 96
+label_len: 48
+pred_len: 96
+d_model: 64
+d_ff: 64
+e_layers: 2
+top_k: 5
+embed: timeF
+freq: h
+dropout: 0.1
+learning_rate: 0.001
+batch_size: 32
+train_epochs: 10
+patience: 3

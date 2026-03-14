@@ -1,0 +1,6 @@
+{
+  "id": "PAttn_2024",
+  "model_name": "PAttn",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

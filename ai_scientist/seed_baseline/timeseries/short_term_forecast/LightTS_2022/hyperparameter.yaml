@@ -1,0 +1,33 @@
+# LightTS: Light-weight Time Series Forecasting
+# 短期预测任务专用配置（M4数据集）
+
+task_name: short_term_forecast
+is_training: 1
+
+# M4数据集配置
+data: m4
+seasonal_patterns: [Yearly, Quarterly, Monthly, Weekly, Daily, Hourly]
+features: S
+
+# 模型维度配置
+# enc_in, dec_in, c_out 由框架根据M4数据集自动设置为1（单变量）
+d_model: 64
+d_ff: 128
+
+# LightTS特定超参数
+# chunk_size在代码中自动设置为min(seq_len, 16)
+# hidden_dim=32 (F'瓶颈维度), feature_dim=64 (F输出特征维度)
+dropout: 0.1
+
+# 训练配置
+batch_size: 32
+learning_rate: 0.001
+train_epochs: 10
+patience: 3
+
+# 短期预测专用损失函数
+loss: SMAPE
+
+# 其他配置
+des: Exp
+itr: 1

@@ -1,0 +1,17 @@
+task_name: classification
+is_training: 1
+model: Informer
+seq_len: 96
+e_layers: 3
+d_model: 64
+n_heads: 8
+d_ff: 256
+factor: 5
+dropout: 0.1
+activation: gelu
+distil: true
+batch_size: 32
+learning_rate: 0.0001
+train_epochs: 8
+patience: 3
+lradj: type1

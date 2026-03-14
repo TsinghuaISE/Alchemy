@@ -1,0 +1,17 @@
+is_training: 1
+task_name: imputation
+features: M
+seq_len: 96
+label_len: 0
+pred_len: 0
+e_layers: 2
+d_model: 64
+d_ff: 128
+top_k: 5
+num_kernels: 6
+dropout: 0.1
+batch_size: 16
+learning_rate: 0.001
+mask_rate: 0.25
+des: Exp
+itr: 1

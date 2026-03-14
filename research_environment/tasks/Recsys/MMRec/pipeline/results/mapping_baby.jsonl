@@ -1,0 +1,1 @@
+{"model": "LightGCN", "dataset": "baby", "returncode": 1, "metrics": {}, "log_file": "/data2/liyu/llh/PaperBench-Pro/Recsys/MMRec/run_logs/LightGCN-baby-20251219-234115.log", "elapsed": 2.5350472927093506, "gpu": "4"}

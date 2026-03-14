@@ -1,0 +1,23 @@
+task_name: short_term_forecast
+is_training: 1
+data: m4
+seasonal_patterns: [Yearly, Quarterly, Monthly, Weekly, Daily, Hourly]
+
+# Model architecture
+individual: false
+moving_avg: 25
+use_norm: false
+
+# Training configuration
+batch_size: 16
+learning_rate: 0.0005
+train_epochs: 10
+patience: 3
+loss: SMAPE
+
+# Basic settings
+features: M
+enc_in: 1
+dec_in: 1
+c_out: 1
+itr: 5

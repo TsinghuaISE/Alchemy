@@ -1,0 +1,6 @@
+{
+  "id": "WPMixer_2024",
+  "model_name": "WPMixer",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

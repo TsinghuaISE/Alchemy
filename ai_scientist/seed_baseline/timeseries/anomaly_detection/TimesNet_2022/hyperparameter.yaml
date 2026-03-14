@@ -1,0 +1,29 @@
+task_name: anomaly_detection
+is_training: 1
+model_id: TimesNet_AD
+model: TimesNet
+
+# Sequence configuration
+seq_len: 100
+pred_len: 100
+features: M
+
+# Model architecture
+d_model: 128
+d_ff: 128
+e_layers: 2
+top_k: 5
+num_kernels: 6
+
+# Training configuration
+batch_size: 128
+train_epochs: 10
+learning_rate: 0.0001
+dropout: 0.1
+
+# Anomaly detection specific
+anomaly_ratio: 1
+
+# Optimization
+patience: 3
+lradj: type1

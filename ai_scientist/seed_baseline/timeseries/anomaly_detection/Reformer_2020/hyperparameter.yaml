@@ -1,0 +1,13 @@
+task_name: anomaly_detection
+is_training: 1
+model_id: MSL
+model: Reformer
+features: M
+seq_len: 100
+pred_len: 0
+d_model: 128
+d_ff: 128
+e_layers: 3
+anomaly_ratio: 1
+batch_size: 128
+train_epochs: 10

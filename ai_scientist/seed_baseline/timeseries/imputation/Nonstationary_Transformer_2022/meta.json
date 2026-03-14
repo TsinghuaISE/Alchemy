@@ -1,0 +1,6 @@
+{
+  "id": "Nonstationary_Transformer_2022",
+  "model_name": "Nonstationary_Transformer",
+  "task": "imputation",
+  "domain": "TimeSeries"
+}

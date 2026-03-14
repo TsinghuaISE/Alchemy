@@ -1,0 +1,6 @@
+{
+  "id": "FEDformer_2022",
+  "model_name": "FEDformer",
+  "task": "classification",
+  "domain": "TimeSeries"
+}

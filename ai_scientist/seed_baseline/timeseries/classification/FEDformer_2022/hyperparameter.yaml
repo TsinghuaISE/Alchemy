@@ -1,0 +1,14 @@
+task_name: classification
+is_training: 1
+model: FEDformer
+seq_len: 96
+d_model: 128
+n_heads: 8
+e_layers: 2
+d_ff: 256
+dropout: 0.1
+activation: gelu
+batch_size: 16
+learning_rate: 0.0001
+train_epochs: 100
+patience: 10

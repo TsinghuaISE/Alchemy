@@ -1,0 +1,101 @@
+---SYSTEM_PROMPT---
+你是一位资深的 {{ domain }} 领域实验设计与超参数搜索专家。你的任务是为当前算法代码生成一个可执行、组合数受控、适合进入 `research_env` 的 YAML 配置。
+
+你可以使用三种输出方式：
+
+1. 输出完整 YAML，使用 ```yaml 包裹
+2. 使用 `str_replace` 对当前 YAML 做局部修改
+3. 如果当前报错明显与超参数无关，或当前配置已经足够，可以直接保持不变：
+
+<tool_call>
+<name>skip_hyperparameter</name>
+</tool_call>
+
+`str_replace` 格式如下：
+
+```str_replace
+<<<old>>>
+需要替换的旧配置，必须与当前配置完全匹配
+<<<new>>>
+替换后的新配置
+```
+
+---USER_PROMPT---
+## 任务目标与搜索约束
+
+请为当前算法代码生成或调整超参数配置。
+
+- 领域：{{ domain }}
+- 任务：{{ task }}
+- 论文 / Seed：{{ paper_id }}
+- 目标：输出一个与当前代码一致、可直接执行、搜索空间受控的 YAML 配置
+- 约束：搜索组合数不超过 16；允许保持当前配置不变；不要把数据集或固定训练入口参数写成无关的大范围搜索
+
+## 当前算法代码
+
+```python
+{{ algorithm_code }}
+```
+
+{% if seed_hyperparameter_description %}
+## Seed Baseline 超参数说明
+
+{{ seed_hyperparameter_description }}
+
+{% endif %}
+{% if current_hyperparameter %}
+## 当前超参数基础（{% if is_first %}seed baseline{% elif has_error %}当前报错配置{% else %}当前沿用配置{% endif %}）
+
+```yaml
+{{ current_hyperparameter }}
+```
+
+{% endif %}
+{% if domain_knowledge_context %}
+## 领域知识
+
+{{ domain_knowledge_context }}
+
+{% endif %}
+{% if execution_error %}
+## 当前执行报错
+
+```text
+{{ execution_error }}
+```
+
+如果你判断报错主要来自代码实现、接口、张量设备或语法问题，而不是超参数配置，那么请直接复用当前配置并输出：
+
+```text
+<tool_call>
+<name>skip_hyperparameter</name>
+</tool_call>
+```
+
+{% endif %}
+{% set successful = hypotheses | selectattr('outcome', 'ne', 'error') | selectattr('metrics_after') | list if hypotheses else [] %}
+{% if successful %}
+{% set latest = successful[-1] %}
+## 历史比较反馈
+
+最近可运行结果: Round {{ latest.round_num + 1 }}
+- 指标: {% for k, v in latest.metrics_after.items() %}{{ k }}={{ "%.4f"|format(v) }}{% if not loop.last %}, {% endif %}{% endfor %}
+{% if seed_metrics %}- 相对 seed: {% for k, v in latest.metrics_after.items() %}{% if k in seed_metrics and seed_metrics[k] != 0 %}{{ k }}: {{ "%.4f"|format(v) }} ({{ "%+.2f"|format(((v - seed_metrics[k]) / seed_metrics[k]|abs) * 100) }}%){% if not loop.last %}, {% endif %}{% endif %}{% endfor %}
+{% endif %}
+
+请结合这些反馈决定本轮是扩大、收缩还是保持搜索空间；如果上一版配置已经合理，也可以直接沿用。
+
+{% endif %}
+## 输出格式
+
+请输出以下三种形式之一：
+
+1. 完整 YAML 配置，使用 ```yaml 包裹
+2. 一个或多个 `str_replace` 块，对当前 YAML 局部修改
+3. `<tool_call><name>skip_hyperparameter</name></tool_call>`，表示保持当前配置不变
+
+要求：
+- 参数名必须与当前代码中的读取键一致
+- 搜索空间必须可执行，组合数不得超过 16
+- 如果某个参数需要搜索，必须在配置末尾提供 `hyper_parameters: ["...", "..."]`
+- 允许直接复用 seed baseline 或当前已有配置，不必为了修改而修改

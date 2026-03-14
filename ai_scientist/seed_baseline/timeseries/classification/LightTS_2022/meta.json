@@ -1,0 +1,6 @@
+{
+  "id": "LightTS_2022",
+  "model_name": "LightTS",
+  "task": "classification",
+  "domain": "TimeSeries"
+}

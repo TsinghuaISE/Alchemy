@@ -1,0 +1,63 @@
+# 大文件忽略
+*.sif
+*.tar
+*.tar.gz
+*.gz
+research_env/domains/**/dist/
+# dataset/
+research_env/dataset/
+research_env/container/
+
+# 运行输出和日志
+/logs/
+output/
+.runs/
+research_env/.runs/
+research_env/logs/*
+!research_env/logs/*.py
+paperbench_runs/
+
+# Python缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 上游项目文档和构建产物 (防止重新引入)
+**/.ipynb_checkpoints/
+**/*.egg-info/
+research_env/docs/
+research_env/domains/**/docs/
+research_env/domains/**/paper/
+research_env/domains/**/Image/
+research_env/domains/**/images/
+research_env/domains/**/img/
+research_env/domains/**/*.md
+research_env/domains/**/asset/
+
+# 测试文件
+research_env/domains/**/test_*
+research_env/domains/**/tests/
+research_env/domains/**/.github/
+
+# 二进制和模型文件
+*.png
+*.PNG
+*.pdf
+*.pt
+*.whl
+*.json.backup
+*.backup
+
+# 临时文件
+*.npy
+*.pkl
+*.csv
+*.xlsx
+*.npz
+*.ts
+
+# 构建脚本和容器定义(非核心)
+research_env/domains/**/.dockerignore
+research_env/domains/**/.vscode/
+research_env/domains/**/.gitignore
+research_env/domains/**/*.xml

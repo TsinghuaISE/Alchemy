@@ -1,0 +1,6 @@
+{
+  "id": "Mamba_2025",
+  "model_name": "Mamba",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

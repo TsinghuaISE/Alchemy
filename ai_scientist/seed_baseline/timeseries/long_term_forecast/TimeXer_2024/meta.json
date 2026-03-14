@@ -1,0 +1,6 @@
+{
+  "id": "TimeXer_2024",
+  "model_name": "TimeXer",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

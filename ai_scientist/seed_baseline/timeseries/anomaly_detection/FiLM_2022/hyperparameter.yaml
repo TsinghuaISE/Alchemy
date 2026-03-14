@@ -1,0 +1,13 @@
+task_name: anomaly_detection
+is_training: 1
+model_id: MSL
+model: FiLM
+features: M
+seq_len: 100
+pred_len: 100
+d_model: 128
+d_ff: 128
+e_layers: 3
+anomaly_ratio: 1
+batch_size: 32
+train_epochs: 10

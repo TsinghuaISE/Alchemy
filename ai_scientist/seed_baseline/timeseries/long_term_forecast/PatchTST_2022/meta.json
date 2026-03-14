@@ -1,0 +1,6 @@
+{
+  "id": "PatchTST_2022",
+  "model_name": "PatchTST",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

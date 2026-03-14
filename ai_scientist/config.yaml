@@ -1,0 +1,16 @@
+model: "claude-opus-4-5-20251101"
+base_url: "https://aihubmix.com/v1"
+
+tasks:
+  - domain: Recsys
+    task: MMRec
+    metric: "recall@20"
+    seeds: ["PGL_2025"]
+
+  # - domain: timeseries
+  #   task: long_term_forecast
+  #   metric: "mse"
+  #   seeds: ["iTransformer_2023"]
+
+max_rounds: 10
+patience: 3

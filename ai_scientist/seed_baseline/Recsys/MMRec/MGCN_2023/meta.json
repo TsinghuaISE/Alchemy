@@ -1,0 +1,8 @@
+{
+  "id": "MGCN_2023",
+  "paper_title": "Multi-View Graph Convolutional Network for Multimedia Recommendation",
+  "alias": "MGCN",
+  "year": 2023,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

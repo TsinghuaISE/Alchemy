@@ -1,0 +1,14 @@
+seq_len: 96
+label_len: 0
+pred_len: 0
+moving_avg: 25
+individual: false
+batch_size: 16
+learning_rate: 0.001
+train_epochs: 10
+patience: 3
+mask_rate: [0.125, 0.25, 0.375, 0.5]
+features: M
+task_name: imputation
+des: Exp
+itr: 1

@@ -1,0 +1,38 @@
+# Autoformer for Imputation Task
+# Paper: Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting
+
+# Task Configuration
+task_name: imputation
+seq_len: 96
+label_len: 48
+pred_len: 0
+
+# Model Architecture
+d_model: 512
+n_heads: 8
+e_layers: 2
+d_layers: 1
+d_ff: 2048
+moving_avg: 25
+factor: 3
+
+# Embedding & Features
+embed: timeF
+freq: h
+dropout: 0.05
+activation: gelu
+
+# Training Configuration
+learning_rate: 0.0001
+batch_size: 32
+train_epochs: 10
+patience: 3
+loss: MSE
+
+# Imputation Specific
+mask_rate: 0.25
+
+# General Settings
+features: M
+des: Exp
+itr: 1

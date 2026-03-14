@@ -1,0 +1,8 @@
+{
+  "id": "GRCN_2020",
+  "paper_title": "Graph-Refined Convolutional Network for Multimedia Recommendation with Implicit Feedback",
+  "alias": "GRCN",
+  "year": 2020,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

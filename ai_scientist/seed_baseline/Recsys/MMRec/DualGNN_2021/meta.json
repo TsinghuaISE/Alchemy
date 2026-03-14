@@ -1,0 +1,8 @@
+{
+  "id": "DualGNN_2021",
+  "paper_title": "DualGNN: Dual Graph Neural Network for Multimedia Recommendation",
+  "alias": "DualGNN",
+  "year": 2021,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

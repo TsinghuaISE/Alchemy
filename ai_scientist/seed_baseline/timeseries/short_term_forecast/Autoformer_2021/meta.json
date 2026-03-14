@@ -1,0 +1,6 @@
+{
+  "id": "Autoformer_2021",
+  "model_name": "Autoformer",
+  "task": "short_term_forecast",
+  "domain": "TimeSeries"
+}

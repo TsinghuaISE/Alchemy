@@ -1,0 +1,6 @@
+{
+  "id": "Informer_2020",
+  "model_name": "Informer",
+  "task": "anomaly_detection",
+  "domain": "TimeSeries"
+}

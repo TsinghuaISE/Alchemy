@@ -1,0 +1,6 @@
+{
+  "id": "Informer_2020",
+  "model_name": "Informer",
+  "task": "classification",
+  "domain": "TimeSeries"
+}

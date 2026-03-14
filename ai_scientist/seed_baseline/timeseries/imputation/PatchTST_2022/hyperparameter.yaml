@@ -1,0 +1,26 @@
+# PatchTST for Imputation Task
+# Paper: A Time Series is Worth 64 Words: Long-term Forecasting with Transformers
+# Key innovation: Patch-based tokenization with channel independence
+
+# Task configuration
+task_name: imputation
+seq_len: 96
+mask_rate: 0.25
+
+# Model architecture
+d_model: 128
+n_heads: 16
+e_layers: 3
+d_ff: 256
+dropout: 0.1
+activation: gelu
+
+# Training configuration
+batch_size: 16
+learning_rate: 0.0001
+train_epochs: 100
+patience: 10
+
+# Experimental settings
+features: M
+itr: 1

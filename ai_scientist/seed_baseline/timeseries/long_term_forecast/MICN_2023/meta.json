@@ -1,0 +1,6 @@
+{
+  "id": "MICN_2023",
+  "model_name": "MICN",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

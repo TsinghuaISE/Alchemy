@@ -1,0 +1,8 @@
+{
+  "id": "DA-MRS_2024",
+  "paper_title": "Improving Multi-modal Recommender Systems by Denoising and Aligning Multi-modal Content and User Feedback",
+  "alias": "DA-MRS",
+  "year": 2024,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

@@ -1,0 +1,62 @@
+# Recsys/MMRec 任务配置 (MMRec 多模态推荐)
+
+task:
+  domain: Recsys
+  task: MMRec
+  framework: MMRec
+
+execution:
+  container: container/Dockerfile
+  entry: python replicate.py
+  workdir: /app
+  timeout: 3600
+
+mount:
+  replicate:
+    host: "pipeline/replicate.py"
+    container: "/app/replicate.py"
+  models_init:
+    host: "pipeline/src/models/__init__.py"
+    container: "/app/src/models/__init__.py"
+  algorithm:
+    host: "{algorithm_path}"
+    container: "/app/src/models/{model_lower}.py"
+  hyperparameter:
+    host: "{hyperparameter_path}"
+    container: "/app/src/configs/model/{model}.yaml"
+  dataset_config:
+    host: "pipeline/src/configs/dataset"
+    container: "/app/src/configs/dataset"
+  dataset:
+    host: "dataset/{dataset}"
+    container: "/app/data/{dataset}"
+  logs:
+    host: "output/logs/runs/{run_id}/tasks"
+    container: "/logs"
+  mmrec_log:
+    host: "output/logs/runs/{run_id}/mmrec"
+    container: "/app/src/log"
+
+data:
+  datasets:
+    - baby
+    # - sports
+    # - clothing
+
+eval:
+  metrics:
+    - recall@10
+    - recall@20
+    - ndcg@10
+    - ndcg@20
+    - map@10
+    - map@20
+  primary_metric: recall@20
+  higher_is_better: true
+
+args:
+  template: >-
+    --model {model}
+    --dataset {dataset}
+    --gpu {gpu}
+    --log-dir /logs

@@ -1,0 +1,8 @@
+{
+  "id": "LayerGCN_2023",
+  "paper_title": "Layer-refined Graph Convolutional Networks for Recommendation",
+  "alias": "LayerGCN",
+  "year": 2023,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

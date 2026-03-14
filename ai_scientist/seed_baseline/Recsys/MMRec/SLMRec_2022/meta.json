@@ -1,0 +1,8 @@
+{
+  "id": "SLMRec_2022",
+  "paper_title": "Self-supervised Learning for Multimedia Recommendation",
+  "alias": "SLMRec",
+  "year": 2022,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

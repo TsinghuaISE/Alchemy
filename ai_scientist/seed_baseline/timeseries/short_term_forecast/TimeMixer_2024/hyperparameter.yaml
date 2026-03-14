@@ -1,0 +1,35 @@
+# TimeMixer 短期预测超参数配置
+# 论文: TimeMixer: Decomposable Multiscale Mixing for Time Series Forecasting
+
+# 序列长度配置
+seq_len: 96
+label_len: 48
+pred_len: 24
+
+# 模型架构
+d_model: 512
+d_ff: 2048
+e_layers: 2
+dropout: 0.1
+
+# 多尺度配置（短期预测使用较少尺度）
+down_sampling_layers: 1
+down_sampling_method: avg
+
+# 序列分解
+moving_avg: 25
+
+# 归一化
+use_norm: 1
+
+# 训练配置
+learning_rate: 0.001
+batch_size: 16
+train_epochs: 10
+patience: 3
+
+# 损失函数
+loss: MSE
+
+# 学习率调整
+lradj: type1

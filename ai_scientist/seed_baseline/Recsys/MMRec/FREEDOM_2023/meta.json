@@ -1,0 +1,8 @@
+{
+  "id": "FREEDOM_2023",
+  "paper_title": "A Tale of Two Graphs: Freezing and Denoising Graph Structures for Multimodal Recommendation",
+  "alias": "FREEDOM",
+  "year": 2023,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

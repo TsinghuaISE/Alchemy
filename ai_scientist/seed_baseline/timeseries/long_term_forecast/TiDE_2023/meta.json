@@ -1,0 +1,6 @@
+{
+  "id": "TiDE_2023",
+  "model_name": "TiDE",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

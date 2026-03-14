@@ -1,0 +1,8 @@
+{
+  "id": "MG_2024",
+  "paper_title": "Mirror Gradient: Towards Robust Multimodal Recommender Systems via Exploring Flat Local Minima",
+  "alias": "MG",
+  "year": 2024,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

@@ -1,0 +1,13 @@
+task_name: anomaly_detection
+is_training: 1
+model_id: MSL
+model: KANAD
+features: M
+seq_len: 64
+d_model: 3
+anomaly_ratio: 1
+learning_rate: 0.01
+batch_size: 128
+num_workers: 4
+patience: 5
+train_epochs: 100

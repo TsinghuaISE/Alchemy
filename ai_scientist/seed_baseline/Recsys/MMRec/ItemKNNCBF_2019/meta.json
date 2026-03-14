@@ -1,0 +1,8 @@
+{
+  "id": "ItemKNNCBF_2019",
+  "paper_title": "Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches",
+  "alias": "ItemKNNCBF",
+  "year": 2019,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

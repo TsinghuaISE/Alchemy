@@ -1,0 +1,14 @@
+task_name: long_term_forecast
+is_training: 1
+seq_len: 96
+label_len: 48
+pred_len: [96, 192, 336, 720]
+c_out: [7, 7, 7, 7]
+data: [ETTh1, ETTh1, ETTh1, ETTh1]
+dec_in: [7, 7, 7, 7]
+des: Exp
+enc_in: [7, 7, 7, 7]
+factor: 3
+features: [M, M, M, M]
+itr: 1
+n_heads: [2, 8, 8, 16]

@@ -1,0 +1,6 @@
+{
+  "id": "Pyraformer_2021",
+  "model_name": "Pyraformer",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

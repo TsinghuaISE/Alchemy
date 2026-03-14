@@ -1,0 +1,6 @@
+{
+  "id": "Koopa_2023",
+  "model_name": "Koopa",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

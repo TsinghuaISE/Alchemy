@@ -1,0 +1,1 @@
+{"model": "LightGCN", "dataset": "clothing", "returncode": 1, "metrics": {}, "log_file": "/data2/liyu/llh/PaperBench-Pro/Recsys/MMRec/run_logs/LightGCN-clothing-20251219-234118.log", "elapsed": 2.4047176837921143, "gpu": "2"}

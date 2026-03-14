@@ -1,0 +1,17 @@
+task_name: short_term_forecast
+is_training: 1
+seasonal_patterns: [Yearly, Quarterly, Monthly, Weekly, Daily, Hourly]
+batch_size: 16
+c_out: 1
+d_layers: 2
+d_model: 512
+data: m4
+dec_in: 1
+des: Exp
+e_layers: 2
+enc_in: 1
+factor: 3
+features: M
+itr: 1
+learning_rate: 0.001
+loss: SMAPE

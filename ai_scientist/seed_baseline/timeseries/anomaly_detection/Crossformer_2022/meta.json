@@ -1,0 +1,6 @@
+{
+  "id": "Crossformer_2022",
+  "model_name": "Crossformer",
+  "task": "anomaly_detection",
+  "domain": "TimeSeries"
+}

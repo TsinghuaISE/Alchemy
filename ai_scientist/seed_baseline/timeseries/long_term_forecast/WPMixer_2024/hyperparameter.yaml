@@ -1,0 +1,19 @@
+task_name: long_term_forecast
+is_training: 1
+seq_len: 512
+label_len: 0
+pred_len: [96, 192, 336, 720]
+batch_size: 32
+c_out: [null, null, null, null]
+d_model: 32
+data: [electricity, electricity, electricity, electricity]
+dec_in: [null, null, null, null]
+dropout: [0.1, 0.1, 0.2, 0.1]
+enc_in: [null, null, null, null]
+features: [null, null, null, null]
+learning_rate: [0.00328086, 0.000493286, 0.002505375, 0.001977516]
+lradj: type3
+patch_len: 16
+patience: 12
+train_epochs: 100
+use_amp: true

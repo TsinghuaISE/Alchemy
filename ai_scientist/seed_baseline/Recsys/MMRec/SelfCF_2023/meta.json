@@ -1,0 +1,8 @@
+{
+  "id": "SelfCF_2023",
+  "paper_title": "SelfCF: A Simple Framework for Self-supervised Collaborative Filtering",
+  "alias": "SelfCF",
+  "year": 2023,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

@@ -1,0 +1,15 @@
+task_name: long_term_forecast
+is_training: 1
+seq_len: [96, 192, 288, 384]
+pred_len: [48, 96, 144, 192]
+c_out: [321, 321, 321, 321]
+d_layers: 1
+data: [custom, custom, custom, custom]
+dec_in: [321, 321, 321, 321]
+des: Exp
+e_layers: 2
+enc_in: [321, 321, 321, 321]
+factor: 3
+features: [M, M, M, M]
+itr: 1
+learning_rate: 0.001

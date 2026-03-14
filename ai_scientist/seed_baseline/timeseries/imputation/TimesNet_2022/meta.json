@@ -1,0 +1,6 @@
+{
+  "id": "TimesNet_2022",
+  "model_name": "TimesNet",
+  "task": "imputation",
+  "domain": "TimeSeries"
+}

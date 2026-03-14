@@ -1,0 +1,6 @@
+{
+  "id": "Transformer_2017",
+  "model_name": "Transformer",
+  "task": "classification",
+  "domain": "TimeSeries"
+}

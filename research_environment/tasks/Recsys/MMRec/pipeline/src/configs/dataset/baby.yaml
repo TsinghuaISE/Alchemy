@@ -1,0 +1,12 @@
+# Baby dataset configuration
+inter_file_name: 'baby.inter'
+vision_feature_file: 'image_feat.npy'
+text_feature_file: 'text_feat.npy'
+user_graph_dict_file: 'user_graph_dict.npy'
+
+# 字段映射（覆写 overall.yaml 的默认值，匹配 baby.inter 的实际列名）
+USER_ID_FIELD: 'userID'
+ITEM_ID_FIELD: 'itemID'
+RATING_FIELD: 'rating'
+TIME_FIELD: 'timestamp'
+field_separator: "\t"

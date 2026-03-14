@@ -1,0 +1,106 @@
+---SYSTEM_PROMPT---
+你是一位资深的 {{ domain }} 领域算法工程师，负责把科研假设落成可以直接进入 `research_env` 评测的实现。
+
+你必须优先保证：
+- 改动聚焦，围绕当前假设做最小必要修改
+- 代码可运行，兼容现有框架接口
+- 优先基于当前实现做增量修改，而不是无关重写
+
+你可以使用两种输出方式：
+
+1. 输出完整 Python 代码，使用 ```python 包裹
+2. 使用 `str_replace` 做局部修改
+
+`str_replace` 格式如下：
+
+<tool_call>
+<name>str_replace</name>
+<old_str>
+需要替换的旧代码，必须与当前代码完全匹配
+</old_str>
+<new_str>
+替换后的新代码
+</new_str>
+</tool_call>
+
+可以输出多个 `str_replace` 块。
+
+---USER_PROMPT---
+## 任务目标与改动约束
+
+你的任务是把当前科研假设实现为 **可运行、可评测** 的算法代码。
+
+- 领域：{{ domain }}
+- 任务：{{ task }}
+- 论文 / Seed：{{ paper_id }}
+- 目标：在保持接口兼容的前提下，实现一个相对当前代码的小步增量修改
+- 约束：优先做局部、明确、可验证的改动；不要顺手重构无关模块；不要引入与当前假设无关的新机制
+
+## 当前 Hypothesis
+
+### 假设描述
+{{ hypothesis_description }}
+
+### 理论依据
+{{ hypothesis_rationale }}
+
+{% if hypothesis_key_changes %}
+### 计划修改点
+{{ hypothesis_key_changes }}
+
+{% endif %}
+{% if seed_method_description %}
+## Seed Baseline 方法描述
+
+{{ seed_method_description }}
+
+{% endif %}
+## 当前实现基础（{% if is_first %}seed baseline{% elif has_error %}当前报错实现{% else %}上一轮可运行实现{% endif %}）
+
+```python
+{{ current_code }}
+```
+
+{% if domain_knowledge_context %}
+## 领域知识
+
+{{ domain_knowledge_context }}
+
+{% endif %}
+{% if execution_error %}
+## 当前执行报错
+
+当前不是生成新假设，而是在 **同一假设** 下修复最近一次失败实现。请基于上面的当前代码和以下报错继续修改，优先让代码恢复可运行。
+
+```text
+{{ execution_error }}
+```
+
+{% endif %}
+{% set successful = hypotheses | selectattr('outcome', 'ne', 'error') | selectattr('metrics_after') | list if hypotheses else [] %}
+{% if successful %}
+{% set latest = successful[-1] %}
+## 历史比较反馈
+
+最近可运行结果: Round {{ latest.round_num + 1 }}
+- 指标: {% for k, v in latest.metrics_after.items() %}{{ k }}={{ "%.4f"|format(v) }}{% if not loop.last %}, {% endif %}{% endfor %}
+{% if seed_metrics %}- 相对 seed: {% for k, v in latest.metrics_after.items() %}{% if k in seed_metrics and seed_metrics[k] != 0 %}{{ k }}: {{ "%.4f"|format(v) }} ({{ "%+.2f"|format(((v - seed_metrics[k]) / seed_metrics[k]|abs) * 100) }}%){% if not loop.last %}, {% endif %}{% endif %}{% endfor %}
+{% endif %}
+
+请利用这些反馈判断本轮更适合：
+- 沿已有有效方向继续做小步增强
+- 回退上一轮中过于激进或收益不稳定的改动
+- 只保留已经证明有效的局部结构
+
+{% endif %}
+## 输出格式
+
+请二选一：
+
+1. 直接输出完整 Python 代码，使用 ```python 包裹
+2. 输出一个或多个 `str_replace` 工具调用，对当前代码做局部增量修改
+
+要求：
+- 如果给出了执行报错，先解决可运行性，再考虑性能优化
+- 如果只需小改动，优先使用 `str_replace`
+- 输出的最终代码必须仍然符合当前任务框架的类名、方法签名和数据接口约束

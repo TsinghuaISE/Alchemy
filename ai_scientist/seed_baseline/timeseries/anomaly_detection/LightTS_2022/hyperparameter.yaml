@@ -1,0 +1,15 @@
+task_name: anomaly_detection
+is_training: 1
+model_id: MSL
+model: LightTS
+features: M
+seq_len: 100
+pred_len: 0
+d_model: 512
+d_ff: 2048
+e_layers: 3
+dropout: 0.1
+anomaly_ratio: 1
+batch_size: 128
+train_epochs: 10
+learning_rate: 0.0001

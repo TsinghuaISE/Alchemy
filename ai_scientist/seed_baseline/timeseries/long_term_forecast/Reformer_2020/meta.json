@@ -1,0 +1,6 @@
+{
+  "id": "Reformer_2020",
+  "model_name": "Reformer",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

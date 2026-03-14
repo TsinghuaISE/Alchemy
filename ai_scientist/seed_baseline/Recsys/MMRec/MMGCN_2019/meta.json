@@ -1,0 +1,8 @@
+{
+  "id": "MMGCN_2019",
+  "paper_title": "MMGCN: Multi-modal Graph Convolution Network for Personalized Recommendation of Micro-video",
+  "alias": "MMGCN",
+  "year": 2019,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

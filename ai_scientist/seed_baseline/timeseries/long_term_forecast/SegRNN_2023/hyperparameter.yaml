@@ -1,0 +1,15 @@
+task_name: long_term_forecast
+is_training: 1
+seq_len: 96
+pred_len: [96, 192, 336, 720]
+c_out: [null, null, null, null]
+d_model: 512
+data: [custom, custom, custom, custom]
+dec_in: [null, null, null, null]
+des: Exp
+dropout: 0
+enc_in: [321, 321, 321, 321]
+features: [M, M, M, M]
+itr: 1
+learning_rate: 0.001
+seg_len: 24

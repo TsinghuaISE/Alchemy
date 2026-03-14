@@ -1,0 +1,13 @@
+# 忽略 models 和 config 文件夹
+src/models
+src/configs/model
+results
+run_logs
+src/log
+
+# 忽略一些通常不需要的临时文件和环境缓存
+__pycache__/
+*.pyc
+.git/
+.idea/
+.vscode/

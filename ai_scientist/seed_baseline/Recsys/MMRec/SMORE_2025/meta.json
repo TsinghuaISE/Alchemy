@@ -1,0 +1,8 @@
+{
+  "id": "SMORE_2025",
+  "paper_title": "Spectrum-based Modality Representation Fusion Graph Convolutional Network for Multimodal Recommendation",
+  "alias": "SMORE",
+  "year": 2025,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

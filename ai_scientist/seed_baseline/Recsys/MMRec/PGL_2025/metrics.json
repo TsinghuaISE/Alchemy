@@ -1,0 +1,20 @@
+{
+  "paper_id": "PGL_2025",
+  "metrics": {
+    "recall@10": 0.0679,
+    "recall@20": 0.1029,
+    "ndcg@10": 0.0352,
+    "ndcg@20": 0.0443,
+    "ndcg@50": 0.0569,
+    "precision@5": 0.0087,
+    "precision@10": 0.0069,
+    "precision@20": 0.0055,
+    "precision@50": 0.0037,
+    "map@5": 0.0209,
+    "map@10": 0.0239,
+    "map@20": 0.0264,
+    "map@50": 0.0286
+  },
+  "saved_at": "2026-03-09T22:22:36.308605",
+  "source": "research_env_baseline"
+}

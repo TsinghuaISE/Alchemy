@@ -1,0 +1,8 @@
+{
+  "id": "DRAGON_2023",
+  "paper_title": "Enhancing Dyadic Relations with Homogeneous Graphs for Multimodal Recommendation",
+  "alias": "DRAGON",
+  "year": 2023,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

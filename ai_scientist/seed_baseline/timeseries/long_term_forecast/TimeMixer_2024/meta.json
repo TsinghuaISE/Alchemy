@@ -1,0 +1,6 @@
+{
+  "id": "TimeMixer_2024",
+  "model_name": "TimeMixer",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

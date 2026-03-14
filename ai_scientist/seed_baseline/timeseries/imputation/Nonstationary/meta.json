@@ -1,0 +1,6 @@
+{
+  "id": "Nonstationary",
+  "model_name": "Nonstationary",
+  "task": "imputation",
+  "domain": "TimeSeries"
+}

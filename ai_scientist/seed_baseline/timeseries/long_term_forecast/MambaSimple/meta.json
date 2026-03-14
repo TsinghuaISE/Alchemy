@@ -1,0 +1,6 @@
+{
+  "id": "MambaSimple",
+  "model_name": "MambaSimple",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

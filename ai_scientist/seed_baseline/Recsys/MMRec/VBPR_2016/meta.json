@@ -1,0 +1,8 @@
+{
+  "id": "VBPR_2016",
+  "paper_title": "VBPR: Visual Bayesian Personalized Ranking from Implicit Feedback",
+  "alias": "VBPR",
+  "year": 2016,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

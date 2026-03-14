@@ -1,0 +1,6 @@
+{
+  "id": "DLinear_2022",
+  "model_name": "DLinear",
+  "task": "short_term_forecast",
+  "domain": "TimeSeries"
+}

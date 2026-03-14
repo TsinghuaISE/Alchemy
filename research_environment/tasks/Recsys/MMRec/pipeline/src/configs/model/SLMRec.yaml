@@ -1,0 +1,22 @@
+# 固定参数
+recdim: 64
+layer_num: 3
+mm_fusion_mode: 'concat'
+init: 'xavier'
+adj_type: 'pre'
+dropout_rate: 0.3
+weight_decay: 0   # 禁用优化器衰减，完全交给 reg 控制，避免混淆
+
+# SSL 相关固定
+ssl_task: 'FAC'
+ssl_temp: 0.2     # 经验上的最佳值，不需要搜 [0.1, 0.2, 0.5, 1.0]
+temp: 0.2         # 这里的 temp 看起来重复了，请检查代码是否和 ssl_temp 是同一个，如果是则保留一个即可
+
+# 搜索空间优化
+learning_rate: 0.001  # 没时间可以固定这个，有时间搜 [0.0001, 0.001]
+
+# 真正决定性能的两个核心参数
+reg: [1e-4, 1e-3]                 # 去掉极端的 0.1 和 0.01
+ssl_alpha: [0.01, 0.1, 0.5]       # 去掉 1.0 (太大) 和 0.05 (太细)
+
+hyper_parameters: ["reg", "ssl_alpha"] 

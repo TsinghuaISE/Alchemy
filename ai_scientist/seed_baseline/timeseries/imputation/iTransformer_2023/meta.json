@@ -1,0 +1,6 @@
+{
+  "id": "iTransformer_2023",
+  "model_name": "iTransformer",
+  "task": "imputation",
+  "domain": "TimeSeries"
+}

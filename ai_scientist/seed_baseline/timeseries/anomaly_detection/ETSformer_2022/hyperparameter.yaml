@@ -1,0 +1,28 @@
+task_name: anomaly_detection
+is_training: 1
+model_id: MSL
+model: ETSformer
+
+# Sequence Configuration
+seq_len: 100
+pred_len: 0
+
+# Model Architecture
+d_model: 128
+n_heads: 4
+e_layers: 3
+d_ff: 256
+dropout: 0.1
+
+# ETSformer Specific
+top_k: 5
+
+# Training Configuration
+batch_size: 128
+train_epochs: 10
+learning_rate: 0.0001
+patience: 3
+
+# Task Specific
+anomaly_ratio: 1
+features: M

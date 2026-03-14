@@ -1,0 +1,8 @@
+{
+  "id": "MVGAE_2021",
+  "paper_title": "Multi-Modal Variational Graph Auto-Encoder for Recommendation Systems",
+  "alias": "MVGAE",
+  "year": 2021,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

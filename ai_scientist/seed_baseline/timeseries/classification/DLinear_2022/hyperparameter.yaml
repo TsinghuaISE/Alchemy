@@ -1,0 +1,20 @@
+task_name: classification
+is_training: 1
+model: DLinear
+
+# 序列长度配置
+seq_len: 336
+
+# 模型特定参数
+moving_avg: 25
+dropout: 0.1
+
+# 训练配置
+batch_size: 16
+learning_rate: 0.001
+train_epochs: 100
+patience: 10
+
+# 实验配置
+des: Exp
+itr: 1

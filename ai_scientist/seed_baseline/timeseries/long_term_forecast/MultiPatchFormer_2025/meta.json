@@ -1,0 +1,6 @@
+{
+  "id": "MultiPatchFormer_2025",
+  "model_name": "MultiPatchFormer",
+  "task": "long_term_forecast",
+  "domain": "TimeSeries"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "LGMRec_2024",
+  "paper_title": "LGMRec: Local and Global Graph Learning for Multimodal Recommendation",
+  "alias": "LGMRec",
+  "year": 2024,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}

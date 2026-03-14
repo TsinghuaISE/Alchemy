@@ -1,0 +1,8 @@
+{
+  "id": "BM3_2023",
+  "paper_title": "Bootstrap Latent Representations for Multi-modal Recommendation",
+  "alias": "BM3",
+  "year": 2023,
+  "domain": "Recsys",
+  "task": "MultiModalRecommendation"
+}
