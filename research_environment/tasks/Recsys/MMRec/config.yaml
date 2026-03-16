@@ -13,10 +13,10 @@ execution:
 
 mount:
   replicate:
-    host: "pipeline/replicate.py"
+    host: "{task_root}/pipeline/replicate.py"
     container: "/app/replicate.py"
   models_init:
-    host: "pipeline/src/models/__init__.py"
+    host: "{task_root}/pipeline/src/models/__init__.py"
     container: "/app/src/models/__init__.py"
   algorithm:
     host: "{algorithm_path}"
@@ -25,16 +25,16 @@ mount:
     host: "{hyperparameter_path}"
     container: "/app/src/configs/model/{model}.yaml"
   dataset_config:
-    host: "pipeline/src/configs/dataset"
+    host: "{task_root}/pipeline/src/configs/dataset"
     container: "/app/src/configs/dataset"
   dataset:
-    host: "dataset/{dataset}"
+    host: "{task_root}/dataset/{dataset}"
     container: "/app/data/{dataset}"
   logs:
-    host: "output/logs/runs/{run_id}/tasks"
+    host: "{task_root}/output/logs/runs/{run_id}/tasks"
     container: "/logs"
   mmrec_log:
-    host: "output/logs/runs/{run_id}/mmrec"
+    host: "{task_root}/output/logs/runs/{run_id}/mmrec"
     container: "/app/src/log"
 
 data:

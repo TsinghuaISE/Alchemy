@@ -61,3 +61,5 @@ research_env/domains/**/.dockerignore
 research_env/domains/**/.vscode/
 research_env/domains/**/.gitignore
 research_env/domains/**/*.xml
+
+.env

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-scientist"
+version = "0.1.0"
+description = "AI Scientist research agent and execution environment"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "jinja2>=3.1",
+  "loguru>=0.7",
+  "openai>=1.0",
+  "pyyaml>=6.0",
+  "python-dotenv>=1.0",
+  "rich>=13.0",
+]
+
+[project.scripts]
+ai-scientist = "ai_scientist.main:main"
+ai-scientist-knowledge-learner = "ai_scientist.tools.knowledge_learner:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["ai_scientist*", "research_environment*"]
+
+[tool.setuptools.package-data]
+ai_scientist = ["config.yaml", "agent/prompts/*.jinja"]
+research_environment = ["tasks/**/*.yaml", "tasks/**/*.yml"]

@@ -2,11 +2,11 @@
 
 from loguru import logger
 
-from ai_scientist.agent.agent import ScientificAgent
-from ai_scientist.agent import evaluator
-from ai_scientist.utils.config import load_config
-from ai_scientist.utils.llm_client import LLMClient
-from ai_scientist.utils import seed_loader
+from .agent import ScientificAgent
+from .agent import evaluator
+from .utils.config import load_config
+from .utils.llm_client import LLMClient
+from .utils import seed_loader
 
 
 def main():

@@ -141,7 +141,7 @@ class RunOrchestrator:
             self.task_config["task"]["domain"],
             self.task_config["task"]["task"],
         )
-        self._mount_builder = MountBuilder(self.cluster.shared_root)
+        self._mount_builder = MountBuilder(self.cluster.shared_root, self.task_dir)
 
     def run(
         self,

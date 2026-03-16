@@ -1,5 +1,5 @@
-model: "claude-opus-4-5-20251101"
-base_url: "https://aihubmix.com/v1"
+model: "gemini-3-flash-preview"
+base_url: "https://ssvip.dmxapi.com/v1"
 
 tasks:
   - domain: Recsys

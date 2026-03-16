@@ -5,10 +5,10 @@ from pathlib import Path
 
 from loguru import logger
 
-from ai_scientist import PROJ_ROOT
-from ai_scientist.agent import evaluator, prompt, response_parser
-from ai_scientist.agent.context import Hypothesis, RunContext, RunResult
-from ai_scientist.utils import save
+from .. import PROJ_ROOT
+from . import evaluator, prompt, response_parser
+from .context import Hypothesis, RunContext, RunResult
+from ..utils import save
 
 
 class ScientificAgent:

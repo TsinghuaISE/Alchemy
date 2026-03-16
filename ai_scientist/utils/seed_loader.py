@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from ai_scientist import PROJ_ROOT
+from .. import PROJ_ROOT
 
 
 def seed_dir(domain: str, task: str, paper_id: str) -> Path:

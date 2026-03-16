@@ -3,7 +3,7 @@ from pathlib import Path
 
 import yaml
 
-from ai_scientist import PROJ_ROOT
+from .. import PROJ_ROOT
 
 
 @dataclass
