@@ -1,4 +1,5 @@
 import os
+import threading
 
 from dotenv import load_dotenv
 from loguru import logger
@@ -37,6 +38,7 @@ class LLMClient:
         self.total_prompt_tokens = 0
         self.total_completion_tokens = 0
         self.total_calls = 0
+        self._lock = threading.Lock()
 
         api_key = _resolve_api_key(kwargs.get("api_key"))
         self._client = OpenAI(
@@ -46,10 +48,15 @@ class LLMClient:
             max_retries=3,
         )
 
-    def generate(self, system_prompt: str, user_prompt: str) -> str:
-        self.total_calls += 1
-        logger.debug(f"LLM call #{self.total_calls}: "
-                     f"system={len(system_prompt)}c, user={len(user_prompt)}c")
+    def generate(self, system_prompt: str, user_prompt: str,
+                 temperature: float | None = None) -> str:
+        with self._lock:
+            self.total_calls += 1
+            call_num = self.total_calls
+
+        temp = temperature if temperature is not None else self.temperature
+        logger.debug(f"LLM call #{call_num}: "
+                     f"system={len(system_prompt)}c, user={len(user_prompt)}c, temp={temp}")
 
         response = self._client.chat.completions.create(
             model=self.model,
@@ -58,12 +65,13 @@ class LLMClient:
                 {"role": "user", "content": user_prompt},
             ],
             max_tokens=self.max_tokens,
-            temperature=self.temperature,
+            temperature=temp,
         )
 
         if response.usage:
-            self.total_prompt_tokens += response.usage.prompt_tokens
-            self.total_completion_tokens += response.usage.completion_tokens
+            with self._lock:
+                self.total_prompt_tokens += response.usage.prompt_tokens
+                self.total_completion_tokens += response.usage.completion_tokens
             logger.debug(f"tokens: +{response.usage.prompt_tokens}p "
                          f"+{response.usage.completion_tokens}c = {self.total_tokens} total")
 

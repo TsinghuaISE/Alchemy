@@ -16,7 +16,8 @@ class ScientificAgent:
     def __init__(self, llm, domain: str, task: str, metric: str, *,
                  higher_is_better: bool = True, patience: int = 3,
                  max_rounds: int = 100, threshold: float = 0.01,
-                 max_fix_retries: int = 0, timeout: int = 86400):
+                 max_fix_retries: int = 0, timeout: int = 86400,
+                 temperature: float | None = None):
         self.llm = llm
         self.domain = domain
         self.task = task
@@ -27,6 +28,7 @@ class ScientificAgent:
         self.threshold = threshold
         self.max_fix_retries = max_fix_retries
         self.timeout = timeout
+        self.temperature = temperature
 
         kp = PROJ_ROOT / "domain_knowledge" / domain / task / "knowledge.md"
         self.domain_knowledge = kp.read_text(encoding="utf-8") if kp.exists() else ""
@@ -37,7 +39,8 @@ class ScientificAgent:
         ctx = RunContext(
             paper_id=paper_id, seed_code=seed_code, seed_metrics=seed_metrics,
             seed_method=seed_method, seed_hp_desc=seed_hp_desc,
-            output_dir=PROJ_ROOT / "output" / self.domain / self.task / paper_id,
+            output_dir=PROJ_ROOT / "output" / self.domain / self.task / paper_id
+            / (f"temp_{self.temperature}" if self.temperature is not None else "default"),
             current_code=seed_code, current_hp=seed_hp_yaml,
         )
         ctx.output_dir.mkdir(parents=True, exist_ok=True)
@@ -77,7 +80,7 @@ class ScientificAgent:
 
     def _ask_llm(self, template: str, **kw) -> str:
         system_prompt, user_prompt = prompt.render(template, **kw)
-        return self.llm.generate(system_prompt, user_prompt)
+        return self.llm.generate(system_prompt, user_prompt, temperature=self.temperature)
 
     def _generate_hypothesis(self, ctx: RunContext) -> tuple[str, str, str | None]:
         response = self._ask_llm(

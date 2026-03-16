@@ -21,6 +21,8 @@ class Config:
     tasks: list[TaskConfig]
     max_rounds: int = 10
     patience: int = 3
+    temperatures: list[float] = field(default_factory=lambda: [0.7])
+    max_concurrent: int = 1
 
 
 def load_config(path: str | Path | None = None) -> Config:
@@ -42,4 +44,6 @@ def load_config(path: str | Path | None = None) -> Config:
         model=raw["model"], base_url=raw["base_url"],
         max_rounds=raw.get("max_rounds", Config.max_rounds),
         patience=raw.get("patience", Config.patience), tasks=tasks,
+        temperatures=raw.get("temperatures", [0.7]),
+        max_concurrent=raw.get("max_concurrent", 1),
     )

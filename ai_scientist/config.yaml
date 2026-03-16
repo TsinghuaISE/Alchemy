@@ -14,3 +14,7 @@ tasks:
 
 max_rounds: 10
 patience: 3
+
+# 并发配置
+temperatures: [0.3, 0.5, 0.7, 0.9]   # 多样性采样
+max_concurrent: 32                     # 最大并发实验数
