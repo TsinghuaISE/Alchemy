@@ -12,6 +12,11 @@ research_env/container/
 /logs/
 output/
 .runs/
+
+# tasks 下不应上传的运行时产物
+research_environment/tasks/**/ai_scientist/
+# 只排除 task 根下的 dataset/ (数据文件), 不排除 pipeline/config/dataset/ (配置文件)
+research_environment/tasks/*/*/dataset/
 research_env/.runs/
 research_env/logs/*
 !research_env/logs/*.py

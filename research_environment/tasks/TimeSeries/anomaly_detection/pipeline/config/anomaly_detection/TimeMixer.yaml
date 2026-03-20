@@ -1,0 +1,26 @@
+seq_len: 100
+pred_len: 0
+d_model: 16
+d_ff: 32
+e_layers: 2
+anomaly_ratio: 1
+batch_size: 128
+learning_rate: 0.001
+# seq_len: 100
+# pred_len: 0
+# d_model: 16
+# d_ff: 32
+# e_layers: 2
+# d_layers: 1
+# dropout: 0.1
+# channel_independence: 1
+# decomp_method: moving_avg
+# moving_avg: 25
+# use_norm: 1
+# down_sampling_layers: 0
+# down_sampling_window: 1
+# down_sampling_method: avg
+# use_future_temporal_feature: 0
+# anomaly_ratio: 1
+# batch_size: 128
+# learning_rate: 0.001

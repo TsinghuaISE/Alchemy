@@ -1,0 +1,7 @@
+seq_len: 96
+pred_len: [96, 192, 336, 720]
+d_model: 512
+dropout: 0
+features: [M, M, M, M]
+learning_rate: 0.001
+seg_len: 24

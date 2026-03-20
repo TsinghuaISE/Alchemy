@@ -1,0 +1,6 @@
+root_path: "./dataset/SWaT"
+data: "SWaT"
+features: "M"
+enc_in: 51
+c_out: 51
+

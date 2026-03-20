@@ -1,0 +1,7 @@
+seq_len: [96, 192, 288, 384]
+pred_len: [48, 96, 144, 192]
+d_layers: 1
+e_layers: 2
+factor: 3
+features: [M, M, M, M]
+learning_rate: 0.001

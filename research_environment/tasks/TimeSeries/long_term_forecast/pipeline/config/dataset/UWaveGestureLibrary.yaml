@@ -1,0 +1,4 @@
+root_path: "./dataset/UWaveGestureLibrary"
+data: "UEA"
+model_id: "UWaveGestureLibrary"
+

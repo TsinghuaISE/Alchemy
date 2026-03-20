@@ -1,0 +1,8 @@
+seasonal_patterns: [Yearly, Quarterly, Monthly, Weekly, Daily, Hourly]
+batch_size: 16
+d_conv: 4
+d_ff: 16
+d_model: 128
+e_layers: 2
+expand: 2
+learning_rate: 0.001

@@ -1,0 +1,4 @@
+root_path: "./dataset/FaceDetection"
+data: "UEA"
+model_id: "FaceDetection"
+

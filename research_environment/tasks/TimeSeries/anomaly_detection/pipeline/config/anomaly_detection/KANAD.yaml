@@ -1,0 +1,6 @@
+seq_len: 64
+d_model: 3
+anomaly_ratio: 1
+learning_rate: 0.01
+batch_size: 128
+num_workers: 4

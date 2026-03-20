@@ -1,0 +1,7 @@
+e_layers: 3
+d_model: 64
+d_ff: 128
+batch_size: 16
+use_norm: 1
+learning_rate: 0.001
+dropout: 0.1

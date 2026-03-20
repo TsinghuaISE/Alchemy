@@ -1,0 +1,8 @@
+root_path: "./dataset/ETT-small"
+data_path: "ETTm1.csv"
+data: "ETTm1"
+features: "M"
+enc_in: 7
+dec_in: 7
+c_out: 7
+

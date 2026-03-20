@@ -1,0 +1,6 @@
+root_path: "./dataset/MSL"
+data: "MSL"
+features: "M"
+enc_in: 55
+c_out: 55
+

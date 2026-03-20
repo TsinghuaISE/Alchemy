@@ -1,0 +1,76 @@
+# TimeSeries/imputation 任务配置
+
+task:
+  domain: TimeSeries
+  task: imputation
+  framework: time_series
+
+execution:
+  container: container/Dockerfile
+  entry: python replicate.py
+  workdir: /app
+  timeout: 25200
+
+mount:
+  replicate:
+    host: "{task_root}/pipeline/replicate.py"
+    container: "/app/replicate.py"
+  experiment_registry:
+    host: "{task_root}/pipeline/experiment_registry.py"
+    container: "/app/experiment_registry.py"
+  algorithm:
+    host: "{algorithm_path}"
+    container: "/app/models/{model}.py"
+  hyperparameter:
+    host: "{hyperparameter_path}"
+    container: "/app/config/imputation/{model}.yaml"
+  task_config:
+    host: "{task_root}/pipeline/config/imputation"
+    container: "/app/config/imputation"
+  overall_config:
+    host: "{task_root}/pipeline/config/overall.yaml"
+    container: "/app/config/overall.yaml"
+  dataset_config:
+    host: "{task_root}/pipeline/config/dataset"
+    container: "/app/config/dataset"
+  data_provider:
+    host: "{task_root}/pipeline/data_provider"
+    container: "/app/data_provider"
+  exp:
+    host: "{task_root}/pipeline/exp"
+    container: "/app/exp"
+  dataset:
+    host: "{task_root}/dataset"
+    container: "/app/dataset"
+  checkpoints:
+    host: "{task_root}/output/logs/runs/{run_id}/checkpoints"
+    container: "/app/checkpoints"
+  test_results:
+    host: "{task_root}/output/logs/runs/{run_id}/test_results"
+    container: "/app/test_results"
+  results:
+    host: "{task_root}/output/logs/runs/{run_id}/results"
+    container: "/app/results"
+  logs:
+    host: "{task_root}/output/logs/runs/{run_id}/tasks"
+    container: "/logs"
+
+data:
+  datasets:
+    - ETTh1
+    - Weather
+
+eval:
+  metrics:
+    - mse
+    - mae
+  primary_metric: mse
+  higher_is_better: false
+
+args:
+  template: >-
+    --model {model}
+    --dataset {dataset}
+    --task imputation
+    --gpu {gpu}
+    --log-dir /logs

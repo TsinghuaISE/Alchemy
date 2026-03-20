@@ -1,0 +1,9 @@
+seasonal_patterns: [Yearly, Quarterly, Monthly, Weekly, Daily, Hourly]
+batch_size: 16
+d_ff: [32, 64, 32, 32, 16, 32]
+d_layers: 1
+d_model: [16, 64, 32, 32, 16, 32]
+e_layers: 2
+factor: 3
+learning_rate: 0.001
+top_k: 5

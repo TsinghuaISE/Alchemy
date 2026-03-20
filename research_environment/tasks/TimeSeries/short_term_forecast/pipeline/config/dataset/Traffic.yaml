@@ -1,0 +1,8 @@
+root_path: "./dataset/traffic"
+data_path: "traffic.csv"
+data: "custom"
+features: "M"
+enc_in: 862
+dec_in: 862
+c_out: 862
+

@@ -1,0 +1,6 @@
+seq_len: 96
+label_len: 0
+pred_len: 0
+batch_size: 256
+learning_rate: 0.001
+mask_rate: [0.1, 0.3, 0.5, 0.7]

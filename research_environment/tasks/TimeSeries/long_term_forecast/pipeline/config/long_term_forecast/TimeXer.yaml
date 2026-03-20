@@ -1,0 +1,7 @@
+seq_len: 96
+label_len: 48
+pred_len: [96, 192, 336, 720]
+batch_size: 4
+e_layers: [4, 3, 4, 3]
+factor: 3
+features: [M, M, M, M]

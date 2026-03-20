@@ -1,0 +1,4 @@
+root_path: "./dataset/JapaneseVowels"
+data: "UEA"
+model_id: "JapaneseVowels"
+

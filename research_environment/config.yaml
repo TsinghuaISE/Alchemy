@@ -27,9 +27,9 @@ singularity:
   containall: false
 
 scheduler:
-  gpus_per_node: 1
-  gpu_ids: [2]
-  max_per_gpu: 8
-  max_concurrent: 8
+  gpus_per_node: 4
+  gpu_ids: [1, 2, 4, 5]
+  max_per_gpu: 32
+  max_concurrent: 128
 
-timeout: 3600
+timeout: 10800

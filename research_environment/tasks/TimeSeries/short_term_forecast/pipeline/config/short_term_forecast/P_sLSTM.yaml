@@ -1,0 +1,4 @@
+seasonal_patterns: [Yearly, Quarterly, Monthly, Weekly, Daily, Hourly]
+batch_size: 16
+learning_rate: 0.001
+pred_len: 1

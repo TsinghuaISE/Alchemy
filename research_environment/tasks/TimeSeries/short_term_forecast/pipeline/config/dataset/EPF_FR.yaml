@@ -1,0 +1,8 @@
+root_path: "./dataset/EPF"
+data_path: "FR.csv"
+data: "custom"
+features: "MS"
+enc_in: 3
+dec_in: 3
+c_out: 1
+

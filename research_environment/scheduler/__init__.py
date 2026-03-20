@@ -1,3 +1,3 @@
-from .gpu_scheduler import GPUResource, NodeGPUScheduler
+from research_environment.scheduler.gpu_scheduler import GPUResource, NodeGPUScheduler
 
 __all__ = ["GPUResource", "NodeGPUScheduler"]

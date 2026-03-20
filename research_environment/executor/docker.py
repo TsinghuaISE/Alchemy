@@ -9,7 +9,7 @@ import threading
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from .base import ExecutorBase
+from research_environment.executor.base import ExecutorBase
 
 
 class DockerExecutor(ExecutorBase):

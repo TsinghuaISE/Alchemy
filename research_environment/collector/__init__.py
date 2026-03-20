@@ -11,7 +11,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from .result_table import (
+from research_environment.collector.result_table import (
     ResultTable, DatasetResult, AlgorithmProgress,
 )
 

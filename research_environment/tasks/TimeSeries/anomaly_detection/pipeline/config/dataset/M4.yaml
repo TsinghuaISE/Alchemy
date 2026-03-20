@@ -1,0 +1,7 @@
+root_path: "./dataset/m4"
+data: "m4"
+features: "M"
+enc_in: 1
+dec_in: 1
+c_out: 1
+loss: "SMAPE"

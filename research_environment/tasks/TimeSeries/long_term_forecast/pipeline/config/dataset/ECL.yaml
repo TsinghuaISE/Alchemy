@@ -1,0 +1,8 @@
+root_path: "./dataset/electricity"
+data_path: "electricity.csv"
+data: "custom"
+features: "M"
+enc_in: 321
+dec_in: 321
+c_out: 321
+

@@ -1,0 +1,6 @@
+root_path: "./dataset/PSM"
+data: "PSM"
+features: "M"
+enc_in: 25
+c_out: 25
+

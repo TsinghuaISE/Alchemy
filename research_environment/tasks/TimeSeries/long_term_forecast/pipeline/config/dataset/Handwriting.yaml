@@ -1,0 +1,4 @@
+root_path: "./dataset/Handwriting"
+data: "UEA"
+model_id: "Handwriting"
+

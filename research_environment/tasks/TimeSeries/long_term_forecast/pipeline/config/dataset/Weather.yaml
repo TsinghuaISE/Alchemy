@@ -1,0 +1,8 @@
+root_path: "./dataset/weather"
+data_path: "weather.csv"
+data: "custom"
+features: "M"
+enc_in: 21
+dec_in: 21
+c_out: 21
+

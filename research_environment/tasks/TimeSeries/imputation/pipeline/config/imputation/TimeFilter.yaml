@@ -1,0 +1,15 @@
+seq_len: 96
+label_len: 0
+pred_len: 0
+e_layers: 2
+d_model: 64
+d_ff: 64
+n_heads: 8
+batch_size: 16
+patch_len: 16
+alpha: 0.1
+top_p: 0.5
+pos: 1
+learning_rate: 0.001
+dropout: 0.1
+mask_rate: [0.25]

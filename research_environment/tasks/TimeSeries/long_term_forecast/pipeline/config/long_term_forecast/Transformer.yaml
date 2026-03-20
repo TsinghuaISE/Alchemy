@@ -1,0 +1,7 @@
+seq_len: 96
+label_len: 48
+pred_len: [96, 192, 336, 720]
+d_layers: 1
+e_layers: 2
+factor: 3
+features: [S, S, S, S]

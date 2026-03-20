@@ -3,7 +3,7 @@
 import re
 from pathlib import Path
 
-from ....plugin import TaskPlugin
+from research_environment.plugin import TaskPlugin
 
 
 class MMRecPlugin(TaskPlugin):

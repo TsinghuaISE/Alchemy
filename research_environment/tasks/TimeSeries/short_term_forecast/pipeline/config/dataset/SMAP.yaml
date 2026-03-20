@@ -1,0 +1,6 @@
+root_path: "./dataset/SMAP"
+data: "SMAP"
+features: "M"
+enc_in: 25
+c_out: 25
+

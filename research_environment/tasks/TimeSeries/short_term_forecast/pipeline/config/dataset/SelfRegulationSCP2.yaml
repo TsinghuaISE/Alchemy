@@ -1,0 +1,4 @@
+root_path: "./dataset/SelfRegulationSCP2"
+data: "UEA"
+model_id: "SelfRegulationSCP2"
+

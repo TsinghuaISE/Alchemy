@@ -12,7 +12,7 @@ import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from .base import ExecutorBase
+from research_environment.executor.base import ExecutorBase
 
 
 # ── SSH 连接管理 (ControlMaster 复用) ──

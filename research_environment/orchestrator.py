@@ -9,11 +9,11 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from .collector import ResultTable, TaskResult, RunSummary, save_results
-from .executor import DockerExecutor, SSHSingularityExecutor, CommandResult
-from .mount import MountBuilder
-from .plugin import TaskPlugin, load_plugin
-from .scheduler import GPUResource, NodeGPUScheduler
+from research_environment.collector import ResultTable, TaskResult, RunSummary, save_results
+from research_environment.executor import DockerExecutor, SSHSingularityExecutor, CommandResult
+from research_environment.mount import MountBuilder
+from research_environment.plugin import TaskPlugin, load_plugin
+from research_environment.scheduler import GPUResource, NodeGPUScheduler
 
 
 # ── 配置加载 ──

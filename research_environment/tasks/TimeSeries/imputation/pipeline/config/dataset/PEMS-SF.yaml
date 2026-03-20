@@ -1,0 +1,4 @@
+root_path: "./dataset/PEMS-SF"
+data: "UEA"
+model_id: "PEMS-SF"
+

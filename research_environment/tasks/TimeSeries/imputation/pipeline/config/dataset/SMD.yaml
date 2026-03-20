@@ -1,0 +1,6 @@
+root_path: "./dataset/SMD"
+data: "SMD"
+features: "M"
+enc_in: 38
+c_out: 38
+

@@ -1,0 +1,4 @@
+root_path: "./dataset/EthanolConcentration"
+data: "UEA"
+model_id: "EthanolConcentration"
+

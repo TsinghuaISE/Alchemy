@@ -1,0 +1,8 @@
+root_path: "./dataset/exchange_rate"
+data_path: "exchange_rate.csv"
+data: "custom"
+features: "M"
+enc_in: 8
+dec_in: 8
+c_out: 8
+

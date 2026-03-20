@@ -1,0 +1,5 @@
+batch_size: 32
+learning_rate: 0.0001
+e_layers: 6
+d_model: 64
+dropout: 0.1
